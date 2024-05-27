@@ -82,3 +82,17 @@ const galleryList = images
   .join('');
 
 galleryElem.insertAdjacentHTML('afterbegin', galleryList);
+
+galleryElem.addEventListener('click', e => {
+  e.preventDefault();
+
+  if (e.target.nodeName !== 'IMG') return;
+
+  // console.log(e.target.dataset.source);
+
+  const instance = basicLightbox.create(`
+    <img src="${e.target.dataset.source}" width="1112" height="640">
+`);
+
+  instance.show();
+});

@@ -2,18 +2,26 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  max-width: 1440px;
+}
+
 ul,
 li {
   list-style-type: none;
 }
 
+image {
+  display: block;
+}
+
 .gallery {
-  padding: 156px 24px;
+  padding: 24px 156px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 24px;
-  max-width: 100%;
 }
 .gallery-image {
   width: 360px;
